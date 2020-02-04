@@ -1,13 +1,12 @@
 #include <gb/malloc.h>
 
 typedef struct Ball{
-    int x;
-    int y;
+    int x, y;
 } Ball;
 
 void Ball_new(Ball *const me, int x, int y) {
-    me->x = x;
     me->y = y;
+    me->x = x;
 }
 
 int Ball_get_X(Ball *const me){

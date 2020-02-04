@@ -2,7 +2,7 @@ CC	= lcc -Wa-l -Wl-m
 
 CFLAGS	= -DGBDK_2_COMPAT
 
-BINS	= debug
+BINS	= main
 
 all:	$(BINS).gb
 

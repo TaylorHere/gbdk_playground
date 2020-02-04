@@ -2,7 +2,7 @@
 #include "block.c"
 
 typedef struct Grid {
-    int rows, cols, grid_size;
+    int rows, cols, size;
     Block ***grids;
 } Grid;
 
@@ -16,7 +16,7 @@ void Grid_malloc(Grid *const me, int rows, int cols){
 
 void Grid_new(Grid *const me, int rows, int cols, int size){
     Grid_malloc(me, rows, cols);
-    me->grid_size = size;
+    me->size = size;
     me->cols = cols;
     me->rows = rows;
 }

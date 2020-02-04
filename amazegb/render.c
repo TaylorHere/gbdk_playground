@@ -2,13 +2,14 @@
 #include "gb/drawing.h"
 #include "board.c"
 
-void render(Board *const board){
+void render_intime(Board *const board){
     int x, y;
-    for (x = 0; x < board->grid.cols * board->grid.grid_size; x += board->grid.grid_size)
+    for (x = board->init_x; x < board->grid.cols * board->grid.size; x += board->grid.size)
     {
-        for (y = 0; y < board->grid.rows * board->grid.grid_size; y += board->grid.grid_size)
+        for (y = board->init_y; y < board->grid.rows * board->grid.size; y += board->grid.size)
         {
-            box(x, y, x + board->grid.grid_size, y + board->grid.grid_size, M_NOFILL);
+            box(x, y, x + board->grid.size, y + board->grid.size, M_NOFILL);
         }
     }
+    circle(Board_get_ball_real_x(board), Board_get_ball_real_x(board), Board_get_ball_radius(board), M_FILL);
 }
