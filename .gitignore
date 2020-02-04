@@ -3,6 +3,10 @@
 *.lst
 *.o
 *.sym
+*.map
+*.lst
+*.sav
 
 # Binaries
 *.gb
+*.gbc

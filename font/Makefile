@@ -1,6 +1,5 @@
-AS = lcc -c
-CC = lcc -Wa-l -Wl-m
-
+AS	= /Users/taylor/sdk/gbz80-gb/2.1.5/bin/as
+CC	= /Users/taylor/sdk/gbz80-gb/2.1.5/bin/lcc 
 BIN = font.gb
 OBJS = font.o
 

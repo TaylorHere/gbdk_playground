@@ -1,0 +1,36 @@
+{
+    "C_Cpp.intelliSenseEngineFallback": "Enabled",
+    "C_Cpp.default.includePath": [
+        "/opt/gbdk/include/",
+        "/Users/taylor/Project/gbdk_playground/amazegb/include/",
+    ],
+    "files.associations": {
+        "cstdlib": "c",
+        "new": "c",
+        "cassert": "c",
+        "cfloat": "c",
+        "climits": "c",
+        "cmath": "c",
+        "cstddef": "c",
+        "cstdint": "c",
+        "cstdio": "c",
+        "exception": "c",
+        "type_traits": "c",
+        "limits": "c",
+        "*.tcc": "c",
+        "cinttypes": "c",
+        "typeinfo": "c",
+        "malloc.h": "c",
+        "cgb.h": "c",
+        "font.h": "c",
+        "stdio.h": "c",
+        "stdlib.h": "c",
+        "gb.h": "c",
+        "hardware.h": "c",
+        "board.h": "c",
+        "render.h": "c",
+        "grid.h": "c",
+        "drawing.h": "c",
+        "ball.h": "c"
+    }
+}
