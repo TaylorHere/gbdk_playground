@@ -20,7 +20,7 @@ void Ball_new(Ball *const me, int x, int y, int min_x, int min_y, int max_x, int
 int Ball_get_y(Ball *const me){
     if (me->y <= me->min_y){
         me->y = me->min_y;
-    } else if (me->y >= me->max_y){
+    } else if (me->y > me->max_y){
         me->y = me->max_y;
     }
     return me->y;
@@ -29,7 +29,7 @@ int Ball_get_y(Ball *const me){
 int Ball_get_x(Ball *const me){
     if (me->x <= me->min_x){
         me->x = me->min_x;
-    } else if (me->x >= me->max_x){
+    } else if (me->x > me->max_x){
         me->x = me->max_x;
     }
     return me->x;
@@ -39,7 +39,7 @@ int Ball_get_x(Ball *const me){
 void Ball_set_y(Ball *const me, int y){
     if (y <= me->min_y){
         me->y = me->min_y;
-    } else if (me->y >= me->max_y){
+    } else if (me->y > me->max_y){
         me->y = me->max_y;
     } else {
         me->y = y;
@@ -49,7 +49,7 @@ void Ball_set_y(Ball *const me, int y){
 void Ball_set_x(Ball *const me, int x){
     if (x <= me->min_x){
         me->x = me->min_x;
-    } else if (me->x >= me->max_x){
+    } else if (me->x > me->max_x){
         me->x = me->max_x;
     } else {
         me->x = x;

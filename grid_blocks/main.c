@@ -6,7 +6,7 @@
 Game game;
 
 int main(){
-    Game_new(&game, 7, 5, 28, 30, 5, 0, 0);
+    Game_new(&game, 5, 5, 27, 30, 5, 0, 0);
     while(1){
         Game_play(&game);
         Game_render_realtime(&game);

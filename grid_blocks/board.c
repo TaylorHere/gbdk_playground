@@ -15,7 +15,7 @@ typedef struct Board{
 
 void Board_new(Board *const me, int grid_rows, int grid_cols, int grid_size, int ball_x, int ball_y){
     Grid_new(&me->grid, grid_rows, grid_cols, grid_size);
-    Ball_new(&me->ball, ball_x, ball_y, 0, 0, grid_rows, grid_cols);
+    Ball_new(&me->ball, ball_x, ball_y, 0, 0, grid_cols-1, grid_rows-1);
 }
 
 int Board_get_ball_radius(Board *const me){

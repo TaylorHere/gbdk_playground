@@ -11,7 +11,7 @@ typedef struct {
 void Grid_malloc(Grid *const me, int rows, int cols){
     int i;
     me->grids = (Block ***)malloc(sizeof(Block *) * rows);
-    for (i = 0; i < rows; i++){
+    for (i = 0; i <= rows; i++){
         me->grids[i] = (Block **)malloc(sizeof(Block) * cols);	
     }
 }

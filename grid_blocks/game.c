@@ -49,9 +49,9 @@ void Game_play(Game *const me){
 
 void Game_render_realtime(Game *const me){
     int x, y;
-    for (x = me->board.init_x; x < me->board.grid.cols * me->board.grid.size; x += me->board.grid.size)
+    for (x = me->board.init_x; x <= me->board.grid.cols * me->board.grid.size; x += me->board.grid.size)
     {
-        for (y = me->board.init_y; y < me->board.grid.rows * me->board.grid.size; y += me->board.grid.size)
+        for (y = me->board.init_y; y <= me->board.grid.rows * me->board.grid.size; y += me->board.grid.size)
         {
             box(x, y, x + me->board.grid.size, y + me->board.grid.size, M_NOFILL);
         }
