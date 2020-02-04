@@ -1,17 +1,26 @@
-AS = lcc -c
-CC = lcc -Wa-l -Wl-m
+CC	= lcc -Wa-l -Wl-m
 
-BIN = main.gb
-OBJS = main.o
+CFLAGS	= -DGBDK_2_COMPAT
 
-all: $(BIN)
+BINS	= debug
 
-%.s: %.ms
-	maccer -o $@ $<
+all:	$(BINS).gb
 
-$(BIN): $(OBJS)
-	$(CC) -o $(BIN) $(OBJS)
+%.o:	%.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+%.o:	%.s
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+%.s:	%.c
+	$(CC) $(CFLAGS) -S -o $@ $<
+
+%.gb:	%.o
+	$(CC) $(CFLAGS) -o $@ $<
 
 clean:
-	rm -rf *.o *.lst
+	rm -f *.o *.lst *.map *.gb *.sav
 
+# Link file, and write 0x80 at position 0x143 in header
+$(BINS).gb: $(BINS).o
+	$(CC) $(CFLAGS) -Wl-yp0x143=0x80 -o $(BINS).gb $(BINS).o

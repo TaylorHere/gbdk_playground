@@ -1,15 +1,28 @@
+#include <gb/malloc.h>
 
-typedef struct {
+typedef struct Ball{
     int x;
-    int y;    
+    int y;
 } Ball;
 
-void Ball_new(Ball *const me){
+void Ball_new(Ball *const me, int x, int y) {
+    me->x = x;
+    me->y = y;
 }
 
-void Ball_move_to(Ball *const me, int x, int y){}
+int Ball_get_X(Ball *const me){
+    return me->x;
+}
 
-void Ball_move_by(Ball *const me, int byX, int byY){}
+int Ball_get_Y(Ball *const me){
+    return me->y;
+}
+
+void Ball_move_by(Ball *const me, int byX, int byY){
+    me->x += byX;
+    me->y += byY;
+}
 
 void Ball_del(Ball *const me){
+    free(me);
 }
