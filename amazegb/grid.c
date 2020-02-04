@@ -1,7 +1,9 @@
+#ifndef GRID_C
+#define GRID_C
 #include <gb/malloc.h>
 #include "block.c"
 
-typedef struct Grid {
+typedef struct {
     int rows, cols, size;
     Block ***grids;
 } Grid;
@@ -45,3 +47,4 @@ void Grid_del(Grid *const me) {
     }
     free(me);
 }
+#endif
